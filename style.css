@@ -1,13 +1,207 @@
 .jumbotron {
-  padding-top: 6rem;
-  background-color: #000000;
-  color: #ffffff;
+  position: relative;
+  background-image: url("img/keg2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.jumbotron:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("img/keg2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.jumbotron-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.jumbotron-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.card-title {
+  font-size: 24px; /* Sesuaikan ukuran font sesuai keinginan Anda */
+  text-align: center;
+  margin-bottom: 15px; /* Jarak antara judul dan teks */
+}
+
+.card-text {
+  font-size: 18px; /* Sesuaikan ukuran font sesuai keinginan Anda */
+  text-align: center;
+}
+
+.col-md-4 {
+  max-width: 220px; /* Sesuaikan lebar kolom card sesuai keinginan Anda */
+  margin: 0 10px; /* Jarak antara kolom card */
+}
+
+.card {
+  max-width: 200px; /* Sesuaikan lebar card sesuai keinginan Anda */
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+body,
+.navbar-brand,
+.nav-link {
+  font-family: calibri;
 }
 
 #experiences {
   background-color: #ffffff;
 }
 
+#about {
+  padding-bottom: 0;
+}
+
 section {
   padding-top: 5rem;
 }
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+.container1 {
+  max-width: 100%;
+}
+
+.text-black {
+  color: black;
+}
+
+/* Tambahkan animasi untuk gambar */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Tambahkan animasi untuk judul gambar */
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Gaya untuk gambar bergerak */
+.slide-image {
+  animation: slide 5s linear infinite;
+}
+
+/* Gaya untuk judul gambar muncul */
+.fade-title {
+  animation: fade 1s ease-in-out infinite alternate;
+}
+
+/* Gaya tambahan untuk jumbotron */
+.jumbotron2 {
+  background-color: #436e8b;
+  color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #fff;
+  background-color: #333;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.social-icons a:hover {
+  background-color: #555;
+}
+
+.email {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+/* img slider */
+#image-slider {
+  margin-top: 50px;
+}
+
+.carousel-item {
+  transition: transform 0.6s ease;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  z-index: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-control-prev-icon:before,
+.carousel-control-next-icon:before {
+  color: #fff;
+}
+
+.carousel-item.active {
+  transform: translateX(0);
+}
+
+.carousel-item-next,
+.carousel-item-prev {
+  transform: translateX(100%);
+}
+
+.carousel-item-next.carousel-item-left,
+.carousel-item-prev.carousel-item-right {
+  transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 15%;
+  }
+}
+
+/* end img slider */
